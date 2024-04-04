@@ -15,7 +15,7 @@
         android:layout_marginTop="120dp"
         android:fontFamily="@font/alfa_slab_one"
         android:text="MoveMate"
-        android:textColor="@color/silver"
+        android:textColor="@color/white"
         android:textSize="30sp" />
 
     <EditText
