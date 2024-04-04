@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/gunmetal"
+    tools:context=".ui.profile.ProfileFragment">
+
+    <TextView
+        android:id="@+id/main_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/alfa_slab_one"
+        android:text="MoveMate"
+        android:textColor="@color/silver"
+        android:textSize="30sp" />
+
+    <ImageView
+        android:id="@+id/btn_back"
+        android:layout_marginTop="10dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/ic_back_to" />
+
+    <TextView
+        android:id="@+id/tv_login"
+        android:layout_width="match_parent"
+        android:fontFamily="@font/alfa_slab_one"
+        android:textColor="@color/silver"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/login" />
+
+    <TextView
+        android:id="@+id/tv_email"
+        android:fontFamily="@font/alfa_slab_one"
+        android:textColor="@color/silver"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/email" />
+
+    <TextView
+        android:id="@+id/tv_age"
+        android:layout_width="match_parent"
+        android:fontFamily="@font/alfa_slab_one"
+        android:textColor="@color/silver"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/age" />
+
+    <TextView
+        android:id="@+id/tv_height"
+        android:fontFamily="@font/alfa_slab_one"
+        android:textColor="@color/silver"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/height" />
+
+    <TextView
+        android:id="@+id/tv_weight"
+        android:fontFamily="@font/alfa_slab_one"
+        android:textColor="@color/silver"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/weight" />
+
+    <Button
+        android:id="@+id/btn_logout"
+        android:fontFamily="@font/alfa_slab_one"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/coral"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/logout" />
+
+    <Button
+        android:id="@+id/btn_feedback_profile"
+        android:textColor="@color/white"
+        android:fontFamily="@font/alfa_slab_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:backgroundTint="@color/coral"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="270dp"
+        android:text="Help" />
+
+</LinearLayout>
