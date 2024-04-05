@@ -13,9 +13,9 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
-        android:fontFamily="@font/alfa_slab_one"
+        android:fontFamily="@font/monda_bold"
         android:text="MoveMate"
-        android:textColor="@color/silver"
+        android:textColor="@color/white"
         android:textSize="30sp" />
 
     <ImageView
@@ -28,7 +28,7 @@
     <TextView
         android:id="@+id/tv_login"
         android:layout_width="match_parent"
-        android:fontFamily="@font/alfa_slab_one"
+        android:fontFamily="@font/monda_bold"
         android:textColor="@color/silver"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -36,7 +36,7 @@
 
     <TextView
         android:id="@+id/tv_email"
-        android:fontFamily="@font/alfa_slab_one"
+        android:fontFamily="@font/monda_bold"
         android:textColor="@color/silver"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -46,7 +46,7 @@
     <TextView
         android:id="@+id/tv_age"
         android:layout_width="match_parent"
-        android:fontFamily="@font/alfa_slab_one"
+        android:fontFamily="@font/monda_bold"
         android:textColor="@color/silver"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -54,7 +54,7 @@
 
     <TextView
         android:id="@+id/tv_height"
-        android:fontFamily="@font/alfa_slab_one"
+        android:fontFamily="@font/monda_bold"
         android:textColor="@color/silver"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -63,7 +63,7 @@
 
     <TextView
         android:id="@+id/tv_weight"
-        android:fontFamily="@font/alfa_slab_one"
+        android:fontFamily="@font/monda_bold"
         android:textColor="@color/silver"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -72,7 +72,7 @@
 
     <Button
         android:id="@+id/btn_logout"
-        android:fontFamily="@font/alfa_slab_one"
+        android:fontFamily="@font/monda_bold"
         android:textColor="@color/white"
         android:backgroundTint="@color/coral"
         android:layout_width="match_parent"
@@ -83,7 +83,7 @@
     <Button
         android:id="@+id/btn_feedback_profile"
         android:textColor="@color/white"
-        android:fontFamily="@font/alfa_slab_one"
+        android:fontFamily="@font/monda_bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end"

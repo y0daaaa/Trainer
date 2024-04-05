@@ -14,9 +14,9 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="170dp"
-        android:fontFamily="@font/alfa_slab_one"
+        android:fontFamily="@font/monda_bold"
         android:text="MoveMate"
-        android:textColor="@color/silver"
+        android:textColor="@color/white"
         android:textSize="30sp" />
 
     <EditText
@@ -24,7 +24,7 @@
         android:layout_marginTop="30dp"
         android:textColorHint="@color/silver"
         android:textColor="@color/white"
-        android:fontFamily="@font/alfa_slab_one"
+        android:fontFamily="@font/monda_bold"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/username" />
@@ -33,16 +33,17 @@
         android:id="@+id/et_password"
         android:textColorHint="@color/silver"
         android:textColor="@color/white"
-        android:fontFamily="@font/alfa_slab_one"
+        android:fontFamily="@font/monda_bold"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:inputType="textPassword"
         android:hint="@string/password" />
 
     <Button
         android:id="@+id/btn_sign_in"
         android:textColor="@color/white"
         android:backgroundTint="@color/coral"
-        android:fontFamily="@font/alfa_slab_one"
+        android:fontFamily="@font/monda_bold"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/sign_in" />
@@ -50,7 +51,7 @@
     <TextView
         android:id="@+id/tv_sign_up"
         android:textColor="@color/silver"
-        android:fontFamily="@font/alfa_slab_one"
+        android:fontFamily="@font/monda_bold"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_marginTop="16dp"
@@ -62,7 +63,7 @@
         android:id="@+id/btn_feedback"
         android:textColor="@color/white"
         android:backgroundTint="@color/coral"
-        android:fontFamily="@font/alfa_slab_one"
+        android:fontFamily="@font/monda_bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end"

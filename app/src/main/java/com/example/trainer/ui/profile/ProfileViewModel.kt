@@ -50,7 +50,8 @@ class ProfileViewModel @Inject constructor(
                 return@launch
             }
 
-            _stateFlow.update { it.copy(username = user.username, email = user.email) }
+            _stateFlow.update { it.copy(username = user.username, email = user.email, age = user.age,
+                weight = user.weight, height = user.height) }
         }
     }
 
