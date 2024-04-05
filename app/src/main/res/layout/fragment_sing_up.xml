@@ -44,6 +44,7 @@
         android:fontFamily="@font/alfa_slab_one"
         android:layout_width="match_parent"
         android:textColor="@color/silver"
+        android:inputType="textPassword"
         android:layout_height="wrap_content"
         android:hint="@string/password" />
 
@@ -53,6 +54,7 @@
         android:fontFamily="@font/alfa_slab_one"
         android:layout_width="match_parent"
         android:textColor="@color/silver"
+        android:inputType="text"
         android:layout_height="wrap_content"
         android:hint="@string/age" />
 
@@ -62,6 +64,7 @@
         android:textColor="@color/silver"
         android:fontFamily="@font/alfa_slab_one"
         android:layout_width="match_parent"
+        android:inputType="text"
         android:layout_height="wrap_content"
         android:hint="@string/height" />
 
@@ -71,6 +74,7 @@
         android:textColorHint="@color/silver"
         android:fontFamily="@font/alfa_slab_one"
         android:layout_height="wrap_content"
+        android:inputType="text"
         android:textColor="@color/silver"
         android:hint="@string/weight" />
 

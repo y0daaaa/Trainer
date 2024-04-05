@@ -39,9 +39,9 @@ abstract class AppDatabase : RoomDatabase() {
                             "email TEXT, " +
                             "login TEXT, " +
                             "password TEXT, " +
-                            "age INT, " +
-                            "height INT, " +
-                            "weight INT)"
+                            "age TEXT, " +
+                            "height TEXT, " +
+                            "weight TEXT)"
                 )
 
                db.execSQL("INSERT INTO User_New (id, email, login, password) SELECT id, email, login, password FROM User")
