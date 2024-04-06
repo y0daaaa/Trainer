@@ -27,13 +27,13 @@ class SingUpFragment : Fragment(R.layout.fragment_sing_up) {
         lifecycleScope.launch(Dispatchers.Main) {
             repeatOnLifecycle(Lifecycle.State.STARTED) {
                 viewModel.stateFlow.collect { state ->
-                    // если ошибка то показать ошибку, затем сбросить состояние
+                    // якщо помилка то показати а після скинути
                     state.errorMessage?.let {
                         showMessage(message = it)
 
                     }
                     if (state.signUpDone) {
-                        // регистрация пройдена, переходим к экрану профиля
+                        // регістрація пройдена, перехід до профілю
                         findNavController().navigate(R.id.action_global_profile_screen)
                     }
                 }
@@ -56,7 +56,7 @@ class SingUpFragment : Fragment(R.layout.fragment_sing_up) {
                 viewModel.signUp(username, email, password, age, height, weight)
                 return@setOnClickListener
             }
-            viewModel.showMessage("Заполните пустые поля")
+            viewModel.showMessage("Fill up the form")
         }
 
         binding.btnFeedbackSignUp.setOnClickListener {
@@ -68,7 +68,6 @@ class SingUpFragment : Fragment(R.layout.fragment_sing_up) {
         }
     }
 
-    // проверить на заполненость полей
     private fun checkFilledFields(): Boolean {
         val usernameFilled = binding.etUsername.text.isNotBlank()
         val emailFilled = binding.etEmail.text.isNotBlank()

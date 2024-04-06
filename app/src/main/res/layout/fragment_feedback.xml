@@ -19,16 +19,16 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="80dp"
-        android:fontFamily="@font/monda_bold"
+        android:fontFamily="@font/athiti_semibold"
         android:text="MoveMate"
         android:textColor="@color/white"
-        android:textSize="30sp" />
+        android:textSize="40sp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Give us a feedback use links below"
-        android:fontFamily="@font/monda_bold"
+        android:fontFamily="@font/athiti_semibold"
         android:layout_gravity="center"
         android:layout_marginTop="70dp"
         android:textSize="20sp"
@@ -40,7 +40,7 @@
         android:layout_height="wrap_content"
         android:text="kuzma.yurii@student.uzhnu.edu.ua"
         android:textSize="18sp"
-        android:fontFamily="@font/monda_bold"
+        android:fontFamily="@font/athiti_semibold"
         android:layout_gravity="center"
         android:textColorLink="@color/silver"
         android:autoLink="email"
@@ -54,18 +54,18 @@
         android:layout_marginTop="5dp"
         android:autoLink="phone"
         android:clickable="true"
-        android:fontFamily="@font/monda_bold"
+        android:fontFamily="@font/athiti_semibold"
         android:layout_gravity="center"
         android:text="+380 73 194 64 09"
         android:textColorLink="@color/silver"
-        android:textSize="14sp"
+        android:textSize="20sp"
         android:focusable="true" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Powered by Kuzma Yurii"
-        android:fontFamily="@font/monda_bold"
+        android:text="Powered by y0daaa"
+        android:fontFamily="@font/athiti_semibold"
         android:textColor="@color/silver"
         android:layout_marginEnd="10dp"
         android:layout_marginTop="360dp"

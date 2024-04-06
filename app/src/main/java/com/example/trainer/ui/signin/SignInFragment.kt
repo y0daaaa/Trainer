@@ -27,7 +27,7 @@ class SignInFragment : Fragment(R.layout.fragment_sign_in) {
             repeatOnLifecycle(Lifecycle.State.STARTED) {
                 viewModel.stateFlow.collect { state ->
                     state.errorMessage?.let { showSnack(it) }
-                    // если авторизация успешна или уже авторизованы, то переходим на экран профиля
+                    // успішна авторизація >> перехід до профілю
                     if (state.authDone || state.isAuth) {
                         findNavController().navigate(R.id.action_global_profile_screen)
                     }

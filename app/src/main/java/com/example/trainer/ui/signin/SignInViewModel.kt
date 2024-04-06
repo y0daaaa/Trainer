@@ -39,12 +39,12 @@ class SignInViewModel @Inject constructor(
 
     fun signIn(username: String, password: String) {
         viewModelScope.launch {
-            // получаем пользователя и сравниваем пароли
+            // отримуємо користувача і порівняння паролів
             val user = usersDao.fetchUser(username)
             if (username == user?.username && password == user.password) {
-                // авторизация успешна, сохраняем сессию
+                // авторизація успішна >> збереження сесії
                 session.saveAuthUser(username)
-                // уведомляем о успешной авторизации
+                // повідомлення про успішну авторизацію
                 signalAuthDone()
                 return@launch
             }
@@ -52,7 +52,7 @@ class SignInViewModel @Inject constructor(
         }
     }
 
-    // сбросить состояние ошибки
+    // !помилку
     fun userMessageShown() {
         _stateFlow.update { it.copy(errorMessage = null) }
     }
