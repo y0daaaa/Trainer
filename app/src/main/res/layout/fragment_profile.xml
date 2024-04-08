@@ -7,17 +7,6 @@
     android:background="@color/gunmetal"
     tools:context=".ui.profile.ProfileFragment">
 
-    <TextView
-        android:id="@+id/main_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        android:fontFamily="@font/athiti_semibold"
-        android:text="MoveMate"
-        android:textColor="@color/white"
-        android:textSize="40sp" />
-
     <ImageView
         android:id="@+id/btn_back"
         android:layout_marginTop="10dp"
@@ -25,13 +14,20 @@
         android:layout_height="48dp"
         android:src="@drawable/ic_back_to" />
 
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:id="@+id/main_label_png"
+        android:src="@drawable/main_label"
+        android:layout_gravity="center" />
+
     <TextView
         android:id="@+id/tv_login"
         android:layout_width="match_parent"
         android:fontFamily="@font/athiti_semibold"
         android:textColor="@color/silver"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="40dp"
         android:text="@string/login" />
 
     <TextView
@@ -89,7 +85,7 @@
         android:layout_gravity="end"
         android:backgroundTint="@color/coral"
         android:layout_marginEnd="10dp"
-        android:layout_marginTop="260dp"
+        android:layout_marginTop="220dp"
         android:text="Help" />
 
 </LinearLayout>
