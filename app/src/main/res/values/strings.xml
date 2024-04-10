@@ -11,4 +11,8 @@
     <string name="logout">Logout</string>
     <string name="sign_in">Sign In</string>
     <string name="help">Help</string>
+    <string name="light">Light</string>
+    <string name="medium">Medium</string>
+    <string name="hard">Hard</string>
+    <string name="choose_training">How do you feel today? Choose your training</string>
 </resources>
