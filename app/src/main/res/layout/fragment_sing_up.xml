@@ -7,30 +7,34 @@
     android:background="@color/gunmetal"
     tools:context=".ui.signup.SingUpFragment">
 
-    <TextView
-        android:id="@+id/main_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="120dp"
-        android:fontFamily="@font/athiti_semibold"
-        android:text="MoveMate"
-        android:textColor="@color/white"
-        android:textSize="40sp" />
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="70dp"
+        android:id="@+id/main_label_png"
+        android:src="@drawable/main_label"
+        android:layout_gravity="center" />
 
     <EditText
         android:id="@+id/et_username"
-        android:textColorHint="@color/silver"
         android:layout_marginTop="30dp"
-        android:textColor="@color/silver"
+        android:inputType="text"
+        android:autofillHints="username"
+        android:backgroundTint="@color/dark_coral"
+        android:textColorHint="@color/silver"
+        android:textColor="@color/white"
         android:fontFamily="@font/athiti_semibold"
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
+        android:layout_gravity="center"
         android:layout_height="wrap_content"
         android:hint="@string/username" />
 
     <EditText
         android:id="@+id/et_email"
-        android:layout_width="match_parent"
+        android:autofillHints="emailAddress"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/dark_coral"
+        android:layout_width="300dp"
         android:textColorHint="@color/silver"
         android:fontFamily="@font/athiti_semibold"
         android:layout_height="wrap_content"
@@ -40,21 +44,26 @@
 
     <EditText
         android:id="@+id/et_password"
+        android:autofillHints="password"
         android:textColorHint="@color/silver"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/dark_coral"
         android:fontFamily="@font/athiti_semibold"
-        android:layout_width="match_parent"
-        android:textColor="@color/silver"
-        android:inputType="textPassword"
+        android:layout_width="300dp"
+        android:layout_gravity="center"
         android:layout_height="wrap_content"
+        android:inputType="textPassword"
         android:hint="@string/password" />
 
     <EditText
         android:id="@+id/et_age"
         android:textColorHint="@color/silver"
         android:fontFamily="@font/athiti_semibold"
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
+        android:backgroundTint="@color/dark_coral"
+        android:layout_gravity="center"
         android:textColor="@color/silver"
-        android:inputType="text"
+        android:inputType="number"
         android:layout_height="wrap_content"
         android:hint="@string/age" />
 
@@ -63,41 +72,48 @@
         android:textColorHint="@color/silver"
         android:textColor="@color/silver"
         android:fontFamily="@font/athiti_semibold"
-        android:layout_width="match_parent"
-        android:inputType="text"
+        android:layout_width="300dp"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/dark_coral"
+        android:inputType="number"
         android:layout_height="wrap_content"
         android:hint="@string/height" />
 
     <EditText
         android:id="@+id/et_weight"
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
+        android:backgroundTint="@color/dark_coral"
+        android:layout_gravity="center"
         android:textColorHint="@color/silver"
         android:fontFamily="@font/athiti_semibold"
         android:layout_height="wrap_content"
-        android:inputType="text"
+        android:inputType="number"
+
         android:textColor="@color/silver"
         android:hint="@string/weight" />
 
     <Button
         android:id="@+id/btn_sign_up"
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
+        android:layout_gravity="center"
         android:textColor="@color/white"
-        android:textSize="17sp"
+        android:textSize="18sp"
+        android:layout_marginTop="50dp"
         android:backgroundTint="@color/coral"
         android:fontFamily="@font/athiti_semibold"
         android:layout_height="wrap_content"
         android:text="@string/sign_up" />
 
-    <TextView
+    <Button
         android:id="@+id/goto_sign_in"
         android:text="I already have account"
         android:textColor="@color/white"
-        android:clickable="true"
         android:fontFamily="@font/athiti_semibold"
         android:layout_gravity="center"
-        android:textSize="20sp"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp" />
+        android:backgroundTint="@color/dark_coral"
+        android:textSize="18sp"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content" />
 
     <Button
         android:id="@+id/btn_feedback_sign_up"
@@ -107,9 +123,9 @@
         android:layout_height="wrap_content"
         android:layout_gravity="end"
         android:backgroundTint="@color/coral"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="30dp"
-        android:text="Help" />
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:text="@string/help" />
 
 
 

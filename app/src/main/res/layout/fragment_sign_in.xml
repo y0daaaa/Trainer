@@ -8,33 +8,38 @@
     tools:context=".ui.signin.SignInFragment">
 
 
-    <TextView
-        android:id="@+id/main_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="170dp"
-        android:fontFamily="@font/athiti_semibold"
-        android:text="MoveMate"
-        android:textColor="@color/white"
-        android:textSize="40sp" />
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:contentDescription="@string/app_name"
+        android:id="@+id/main_label_png"
+        android:src="@drawable/main_label"
+        android:layout_marginTop="140dp"
+        android:layout_gravity="center" />
 
     <EditText
         android:id="@+id/et_username"
         android:layout_marginTop="30dp"
+        android:inputType="text"
+        android:autofillHints="username"
+        android:backgroundTint="@color/dark_coral"
         android:textColorHint="@color/silver"
         android:textColor="@color/white"
         android:fontFamily="@font/athiti_semibold"
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
+        android:layout_gravity="center"
         android:layout_height="wrap_content"
         android:hint="@string/username" />
 
     <EditText
         android:id="@+id/et_password"
+        android:autofillHints="password"
         android:textColorHint="@color/silver"
         android:textColor="@color/white"
+        android:backgroundTint="@color/dark_coral"
         android:fontFamily="@font/athiti_semibold"
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
+        android:layout_gravity="center"
         android:layout_height="wrap_content"
         android:inputType="textPassword"
         android:hint="@string/password" />
@@ -42,21 +47,24 @@
     <Button
         android:id="@+id/btn_sign_in"
         android:textColor="@color/white"
+        android:layout_marginTop="50dp"
         android:backgroundTint="@color/coral"
         android:fontFamily="@font/athiti_semibold"
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
+        android:layout_gravity="center"
+        android:textSize="18sp"
         android:layout_height="wrap_content"
         android:text="@string/sign_in" />
 
-    <TextView
+    <Button
         android:id="@+id/tv_sign_up"
         android:textColor="@color/white"
         android:fontFamily="@font/athiti_semibold"
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
+        android:backgroundTint="@color/dark_coral"
         android:layout_height="48dp"
-        android:layout_marginTop="16dp"
-        android:gravity="center"
-        android:textSize="20sp"
+        android:layout_gravity="center"
+        android:textSize="18sp"
         android:text="I am new here" />
 
     <Button
@@ -67,9 +75,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end"
-        android:layout_marginEnd="30dp"
-        android:layout_marginTop="190dp"
-        android:text="Help" />
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="160dp"
+        android:text="@string/help" />
 
 
 

@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/sign_in_screen">
+    app:startDestination="@id/homeFragment">
 
     <fragment
         android:id="@+id/sign_up_screen"
@@ -39,4 +39,36 @@
     <action
         android:id="@+id/action_global_feedback_screen"
         app:destination="@id/feedback_screen" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.trainer.ui.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/hardFragment"
+        android:name="com.example.trainer.hard.HardFragment"
+        android:label="fragment_hard"
+        tools:layout="@layout/fragment_hard" />
+    <fragment
+        android:id="@+id/mediumFragment"
+        android:name="com.example.trainer.medium.MediumFragment"
+        android:label="fragment_medium"
+        tools:layout="@layout/fragment_medium" />
+    <fragment
+        android:id="@+id/lightFragment"
+        android:name="com.example.trainer.light.LightFragment"
+        android:label="fragment_light"
+        tools:layout="@layout/fragment_light" />
+    <action
+        android:id="@+id/action_global_hardFragment"
+        app:destination="@id/hardFragment" />
+    <action
+        android:id="@+id/action_global_mediumFragment"
+        app:destination="@id/mediumFragment" />
+    <action
+        android:id="@+id/action_global_lightFragment"
+        app:destination="@id/lightFragment" />
+    <action
+        android:id="@+id/action_global_homeFragment"
+        app:destination="@id/homeFragment" />
 </navigation>
