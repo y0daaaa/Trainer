@@ -11,9 +11,12 @@
     <string name="logout">Вийти</string>
     <string name="sign_in">Увійти</string>
     <string name="help">Допомога</string>
+    <string name="squats">Присідання - вправа яка ідеально підходить для </string>
     <string name="help2">Для звʼязку з нами використовуйте посилання нижче</string>
     <string name="light">Легке тренування</string>
     <string name="medium">Тренування середньої важкості</string>
     <string name="hard">Тяжке тренування</string>
     <string name="choose_training">Як ви сьогодні почуваєтесь? Виберіть тренування </string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

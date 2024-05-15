@@ -15,7 +15,7 @@
         android:layout_marginEnd="40dp"
         android:fontFamily="@font/fixel_text"
         android:text="@string/choose_training"
-        android:textColor="@color/silver"
+        android:textColor="@color/white"
         android:textSize="22sp" />
 
 
