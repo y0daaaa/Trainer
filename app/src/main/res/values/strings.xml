@@ -11,7 +11,9 @@
     <string name="logout">Вийти</string>
     <string name="sign_in">Увійти</string>
     <string name="help">Допомога</string>
-    <string name="squats">Присідання - вправа яка ідеально підходить для </string>
+    <string name="nextex">Наступна вправа</string>
+    <string name="squats">Присідання</string>
+    <string name="squatsdes">Виконайте 15 повторень та перейдіть до наступного за допомогою кнопки нижче</string>
     <string name="help2">Для звʼязку з нами використовуйте посилання нижче</string>
     <string name="light">Легке тренування</string>
     <string name="medium">Тренування середньої важкості</string>
