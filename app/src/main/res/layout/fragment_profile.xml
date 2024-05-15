@@ -25,7 +25,7 @@
         android:layout_marginStart="20dp"
         android:id="@+id/tv_login"
         android:layout_width="match_parent"
-        android:fontFamily="@font/athiti_semibold"
+        android:fontFamily="@font/fixel_text"
         android:textColor="@color/silver"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
@@ -34,7 +34,7 @@
     <TextView
         android:layout_marginStart="20dp"
         android:id="@+id/tv_email"
-        android:fontFamily="@font/athiti_semibold"
+        android:fontFamily="@font/fixel_text"
         android:textColor="@color/silver"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -45,7 +45,7 @@
         android:layout_marginStart="20dp"
         android:id="@+id/tv_age"
         android:layout_width="match_parent"
-        android:fontFamily="@font/athiti_semibold"
+        android:fontFamily="@font/fixel_text"
         android:textColor="@color/silver"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -54,7 +54,7 @@
     <TextView
         android:layout_marginStart="20dp"
         android:id="@+id/tv_height"
-        android:fontFamily="@font/athiti_semibold"
+        android:fontFamily="@font/fixel_text"
         android:textColor="@color/silver"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -64,7 +64,7 @@
     <TextView
         android:layout_marginStart="20dp"
         android:id="@+id/tv_weight"
-        android:fontFamily="@font/athiti_semibold"
+        android:fontFamily="@font/fixel_text"
         android:textColor="@color/silver"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -73,7 +73,7 @@
 
     <Button
         android:id="@+id/btn_logout"
-        android:fontFamily="@font/athiti_semibold"
+        android:fontFamily="@font/fixel_text"
         android:textColor="@color/white"
         android:backgroundTint="@color/coral"
         android:layout_width="300dp"
@@ -85,7 +85,7 @@
     <Button
         android:id="@+id/btn_feedback_profile"
         android:textColor="@color/white"
-        android:fontFamily="@font/athiti_semibold"
+        android:fontFamily="@font/fixel_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end"

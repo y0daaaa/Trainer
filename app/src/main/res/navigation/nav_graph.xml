@@ -5,6 +5,9 @@
     android:id="@+id/nav_graph"
     app:startDestination="@id/homeFragment">
 
+    <action
+        android:id="@+id/action_global_homeFragment"
+        app:destination="@id/homeFragment" />
     <fragment
         android:id="@+id/sign_up_screen"
         android:name="com.example.trainer.ui.signup.SingUpFragment"
@@ -22,11 +25,13 @@
         android:name="com.example.trainer.ui.profile.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
+
     <fragment
         android:id="@+id/sign_in_screen"
         android:name="com.example.trainer.ui.signin.SignInFragment"
         android:label="fragment_sign_in"
         tools:layout="@layout/fragment_sign_in" />
+
     <action
         android:id="@+id/action_global_profile_screen"
         app:destination="@id/profile_screen" />
@@ -44,31 +49,29 @@
         android:name="com.example.trainer.ui.home.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
+
     <fragment
-        android:id="@+id/hardFragment"
-        android:name="com.example.trainer.hard.HardFragment"
-        android:label="fragment_hard"
-        tools:layout="@layout/fragment_hard" />
+        android:id="@+id/light1Fragment"
+        android:name="com.example.trainer.ui.light.Light1Fragment"
+        android:label="fragment_light1"
+        tools:layout="@layout/fragment_light1" />
     <fragment
-        android:id="@+id/mediumFragment"
-        android:name="com.example.trainer.medium.MediumFragment"
-        android:label="fragment_medium"
-        tools:layout="@layout/fragment_medium" />
+        android:id="@+id/light2Fragment"
+        android:name="com.example.trainer.ui.light.Light2Fragment"
+        android:label="fragment_light2"
+        tools:layout="@layout/fragment_light2" />
+    <action
+        android:id="@+id/action_global_light2Fragment"
+        app:destination="@id/light2Fragment" />
     <fragment
         android:id="@+id/lightFragment"
-        android:name="com.example.trainer.light.LightFragment"
+        android:name="com.example.trainer.ui.light.LightFragment"
         android:label="fragment_light"
         tools:layout="@layout/fragment_light" />
-    <action
-        android:id="@+id/action_global_hardFragment"
-        app:destination="@id/hardFragment" />
-    <action
-        android:id="@+id/action_global_mediumFragment"
-        app:destination="@id/mediumFragment" />
     <action
         android:id="@+id/action_global_lightFragment"
         app:destination="@id/lightFragment" />
     <action
-        android:id="@+id/action_global_homeFragment"
-        app:destination="@id/homeFragment" />
+        android:id="@+id/action_global_light1Fragment"
+        app:destination="@id/light1Fragment" />
 </navigation>
