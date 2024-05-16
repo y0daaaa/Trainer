@@ -74,4 +74,28 @@
     <action
         android:id="@+id/action_global_light1Fragment"
         app:destination="@id/light1Fragment" />
+    <fragment
+        android:id="@+id/mediumFirstFragment"
+        android:name="com.example.trainer.ui.medium.MediumFirstFragment"
+        android:label="fragment_medium_first"
+        tools:layout="@layout/fragment_medium_first" />
+    <fragment
+        android:id="@+id/mediumSecondFragment"
+        android:name="com.example.trainer.ui.medium.MediumSecondFragment"
+        android:label="fragment_medium_second"
+        tools:layout="@layout/fragment_medium_second" />
+    <fragment
+        android:id="@+id/mediumThirdFragment"
+        android:name="com.example.trainer.ui.medium.MediumThirdFragment"
+        android:label="fragment_medium_third"
+        tools:layout="@layout/fragment_medium_third" />
+    <action
+        android:id="@+id/action_global_mediumFirstFragment"
+        app:destination="@id/mediumFirstFragment" />
+    <action
+        android:id="@+id/action_global_mediumSecondFragment"
+        app:destination="@id/mediumSecondFragment" />
+    <action
+        android:id="@+id/action_global_mediumThirdFragment"
+        app:destination="@id/mediumThirdFragment" />
 </navigation>

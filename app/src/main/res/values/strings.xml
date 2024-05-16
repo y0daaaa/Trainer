@@ -13,9 +13,16 @@
     <string name="help">Допомога</string>
     <string name="nextex">Наступна вправа</string>
     <string name="squats">Присідання</string>
-    <string name="squatsdes">Виконайте 15 повторень та перейдіть до наступного за допомогою кнопки нижче</string>
+    <string name="mediumfirst">Молотки</string>
+    <string name="mediumthird">Махи гантелями сидя</string>
+    <string name="mediumthirddes">Угол лавки повинен бути 90° не нахиляйте руки занадто низько, виконати 3 підходи по 12 повторів</string>
+    <string name="mediumsecond">Махи гантелями</string>
+    <string name="mediumseconddes">Розмістіть лавку горизонтально та виконайте 3 підходи по 12 повторень з підходящими вагами</string>
+    <string name="mediumfirstdes">Виберіть гантелі з зручною вагою для того аби зробити 3 підходи по 12 повторень, локті повинні залишатися на місці</string>
+    <string name="squatsdes">Виконайте 15 повторень, правильно контролюючи дихання та натисніть кнопку нижче</string>
     <string name="help2">Для звʼязку з нами використовуйте посилання нижче</string>
     <string name="light">Легке тренування</string>
+    <string name="finishtrn">Закінчити тренування</string>
     <string name="medium">Тренування середньої важкості</string>
     <string name="hard">Тяжке тренування</string>
     <string name="choose_training">Як ви сьогодні почуваєтесь? Виберіть тренування </string>
