@@ -1,13 +1,11 @@
 package com.example.trainer.ui
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.fragment.app.Fragment
+import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.setupWithNavController
 import com.example.trainer.R
 import com.example.trainer.databinding.ActivityMainBinding
-import com.example.trainer.ui.home.HomeFragment
-import com.example.trainer.ui.profile.ProfileFragment
-import com.example.trainer.ui.statistics.StatisticsFragment
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -18,37 +16,32 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        replaceFragment(HomeFragment())
 
-        binding.bottomNavigationView.setOnItemSelectedListener {
+        val navHostFragment =
+            supportFragmentManager.findFragmentById(R.id.fragment_container) as NavHostFragment
+        val navController = navHostFragment.navController
 
-            when(it.itemId) {
+        binding.bottomNavigationView.setupWithNavController(navController)
 
-                R.id.home_nav -> replaceFragment(HomeFragment())
-                R.id.statistic_nav -> replaceFragment(StatisticsFragment())
-                R.id.profile_nav -> replaceFragment(ProfileFragment())
-
-
-                else -> {
-
-
-
+        binding.bottomNavigationView.setOnItemSelectedListener { menuItem ->
+            when (menuItem.itemId) {
+                R.id.home_nav -> {
+                    // Navigate to the home fragment
+                    navController.navigate(R.id.action_profile_to_home)
+                    true
                 }
-
+                R.id.statistic_nav -> {
+                    // Navigate to the statistics fragment
+                    navController.navigate(R.id.action_statistics_to_home)
+                    true
+                }
+                R.id.profile_nav -> {
+                    // Navigate to the profile fragment
+                    navController.navigate(R.id.action_global_profile_nav)
+                    true
+                }
+                else -> false
             }
-
-            true
         }
-
     }
-
-    private fun replaceFragment(fragment: Fragment) {
-
-        val fragmentManager = supportFragmentManager
-        val fragmentTransaction = fragmentManager.beginTransaction()
-        fragmentTransaction.replace(R.id.frame_layout,fragment)
-        fragmentTransaction.commit()
-
-    }
-
 }

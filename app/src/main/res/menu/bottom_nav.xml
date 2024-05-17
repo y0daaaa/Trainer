@@ -12,11 +12,12 @@
         android:id="@+id/statistic_nav"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:title="Statistic" />
+        android:title="Statistics" />
     <item
         android:icon="@drawable/main_label_mini"
         android:id="@+id/profile_nav"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:title="Profile" />
+
 </menu>

@@ -34,7 +34,7 @@ class SingUpFragment : Fragment(R.layout.fragment_sing_up) {
                     }
                     if (state.signUpDone) {
                         // регістрація пройдена, перехід до профілю
-                        findNavController().navigate(R.id.action_global_profile_screen)
+                        findNavController().navigate(R.id.action_global_profile_nav)
                     }
                 }
             }

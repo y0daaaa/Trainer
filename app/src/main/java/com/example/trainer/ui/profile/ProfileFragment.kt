@@ -1,3 +1,4 @@
+
 package com.example.trainer.ui.profile
 
 import android.os.Bundle
@@ -25,8 +26,18 @@ class ProfileFragment : Fragment(R.layout.fragment_profile) {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        lifecycleScope.launch {
-            repeatOnLifecycle(Lifecycle.State.STARTED) {
+        // вихід
+        requireActivity().onBackPressedDispatcher.addCallback {
+            requireActivity().finish()
+        }
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding = FragmentProfileBinding.bind(view)
+
+        viewLifecycleOwner.lifecycleScope.launch {
+            viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
                 viewModel.stateFlow.collect { state ->
                     // показати помилку
                     state.errorMessage?.let {
@@ -45,16 +56,6 @@ class ProfileFragment : Fragment(R.layout.fragment_profile) {
             }
         }
 
-        // вихід
-        requireActivity().onBackPressedDispatcher.addCallback {
-            requireActivity().finish()
-        }
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        binding = FragmentProfileBinding.bind(view)
-
         binding.btnLogout.setOnClickListener {
             viewModel.logout()
         }
@@ -68,5 +69,4 @@ class ProfileFragment : Fragment(R.layout.fragment_profile) {
         view?.let { Snackbar.make(it, message, Snackbar.LENGTH_SHORT).show() }
         viewModel.userMessageShown()
     }
-
 }
