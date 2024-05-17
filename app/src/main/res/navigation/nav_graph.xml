@@ -98,4 +98,44 @@
     <action
         android:id="@+id/action_global_mediumThirdFragment"
         app:destination="@id/mediumThirdFragment" />
+    <fragment
+        android:id="@+id/hardFirstFragment"
+        android:name="com.example.trainer.ui.hard.HardFirstFragment"
+        android:label="fragment_hard_first"
+        tools:layout="@layout/fragment_hard_first" />
+    <fragment
+        android:id="@+id/hardSecondFragment"
+        android:name="com.example.trainer.ui.hard.HardSecondFragment"
+        android:label="fragment_hard_second"
+        tools:layout="@layout/fragment_hard_second" />
+    <fragment
+        android:id="@+id/hardThirdFragment"
+        android:name="com.example.trainer.ui.hard.HardThirdFragment"
+        android:label="fragment_hard_third"
+        tools:layout="@layout/fragment_hard_third" />
+    <action
+        android:id="@+id/action_global_hardFirstFragment"
+        app:destination="@id/hardFirstFragment" />
+    <action
+        android:id="@+id/action_global_hardSecondFragment"
+        app:destination="@id/hardSecondFragment" />
+    <action
+        android:id="@+id/action_global_hardThirdFragment"
+        app:destination="@id/hardThirdFragment" />
+    <fragment
+        android:id="@+id/hardFourthFragment"
+        android:name="com.example.trainer.ui.hard.HardFourthFragment"
+        android:label="fragment_hard_fourth"
+        tools:layout="@layout/fragment_hard_fourth" />
+    <fragment
+        android:id="@+id/hardFifthFragment"
+        android:name="com.example.trainer.ui.hard.HardFifthFragment"
+        android:label="fragment_hard_fifth"
+        tools:layout="@layout/fragment_hard_fifth" />
+    <action
+        android:id="@+id/action_global_hardFourthFragment"
+        app:destination="@id/hardFourthFragment" />
+    <action
+        android:id="@+id/action_global_hardFifthFragment"
+        app:destination="@id/hardFifthFragment" />
 </navigation>

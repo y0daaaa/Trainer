@@ -28,5 +28,9 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         binding.mediumTablet.setOnClickListener {
             findNavController().navigate(R.id.action_global_mediumFirstFragment)
         }
+
+        binding.hardTablet.setOnClickListener {
+            findNavController().navigate(R.id.action_global_hardFirstFragment)
+        }
     }
 }

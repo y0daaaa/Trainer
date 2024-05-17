@@ -13,9 +13,19 @@
     <string name="help">Допомога</string>
     <string name="nextex">Наступна вправа</string>
     <string name="squats">Присідання</string>
+    <string name="hard1">Вправа на поясницю</string>
+    <string name="hard1des">Зафіксуйте положення тіла як на відео, виконайте 3 підходи по 12 повторів, коли відчуваєте занадто легко візьміть в руки блін від штанги</string>
+    <string name="hard2">Тяга гантелі на спину</string>
+    <string name="hard2des">Візьміть підходящі гантелі, тримайте спину рівно, 4 підходи з зростаючою вагою на 12 повторів</string>
+    <string name="hard3">Вертикальний блок</string>
+    <string name="hard3des">В показаній вище вправі, головне зробити правильний хват та тримати спину рівно, 4 підходи 12 повторів, правильно вибирайте вагу</string>
+    <string name="hard4">Французький жим</string>
+    <string name="hard4des">Гантелі повільно опускайте до голови, лікті потрібно тримати з углом всередину і зафіксувати в одному місті, 3 підходи 8 повторів</string>
+    <string name="hard5">Відтискання на брусах</string>
+    <string name="hard5des">Останню вправу за технікою уазаною вище, до відказу, якщо занадто легко повісити бліни на спеціальний пояс</string>
     <string name="mediumfirst">Молотки</string>
     <string name="mediumthird">Махи гантелями сидя</string>
-    <string name="mediumthirddes">Угол лавки повинен бути 90° не нахиляйте руки занадто низько, виконати 3 підходи по 12 повторів</string>
+    <string name="mediumthirddes">Угол лавки повинен бути 80° не нахиляйте руки занадто низько, виконати 3 підходи по 12 повторів</string>
     <string name="mediumsecond">Махи гантелями</string>
     <string name="mediumseconddes">Розмістіть лавку горизонтально та виконайте 3 підходи по 12 повторень з підходящими вагами</string>
     <string name="mediumfirstdes">Виберіть гантелі з зручною вагою для того аби зробити 3 підходи по 12 повторень, локті повинні залишатися на місці</string>
@@ -26,6 +36,7 @@
     <string name="medium">Тренування середньої важкості</string>
     <string name="hard">Тяжке тренування</string>
     <string name="choose_training">Як ви сьогодні почуваєтесь? Виберіть тренування </string>
+    <string name="warning">Важливо! Не зважаючи на вибрану інтенсивність тренування, потрібно обовʼязково зробити розминку перед ним для запобігання шкоди вашому організму!</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

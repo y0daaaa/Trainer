@@ -18,7 +18,6 @@
         android:textColor="@color/white"
         android:textSize="22sp" />
 
-
     <TextView
         android:id="@+id/light_tablet"
         android:layout_width="250dp"
@@ -69,6 +68,17 @@
         android:padding="5dp"
         android:fontFamily="@font/fixel_text"
         android:background="@drawable/background3"/>
+
+    <TextView
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="40dp"
+        android:fontFamily="@font/fixel_text"
+        android:text="@string/warning"
+        android:textColor="@color/white"
+        android:textSize="22sp" />
 
 
 </LinearLayout>
