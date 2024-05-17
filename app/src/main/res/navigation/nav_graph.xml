@@ -149,9 +149,14 @@
     <action
         android:id="@+id/action_profile_to_home"
         app:destination="@id/homeFragment" />
-
     <action
         android:id="@+id/action_statistics_to_home"
         app:destination="@id/homeFragment" />
+    <action
+        android:id="@+id/action_profile_to_statistics"
+        app:destination="@id/statisticsFragment" />
+    <action
+        android:id="@+id/action_home_to_statistics"
+        app:destination="@id/statisticsFragment" />
 
 </navigation>

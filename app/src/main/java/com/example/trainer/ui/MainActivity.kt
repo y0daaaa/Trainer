@@ -26,17 +26,14 @@ class MainActivity : AppCompatActivity() {
         binding.bottomNavigationView.setOnItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.home_nav -> {
-                    // Navigate to the home fragment
                     navController.navigate(R.id.action_profile_to_home)
                     true
                 }
                 R.id.statistic_nav -> {
-                    // Navigate to the statistics fragment
-                    navController.navigate(R.id.action_statistics_to_home)
+                    navController.navigate(R.id.action_profile_to_statistics)
                     true
                 }
                 R.id.profile_nav -> {
-                    // Navigate to the profile fragment
                     navController.navigate(R.id.action_global_profile_nav)
                     true
                 }
