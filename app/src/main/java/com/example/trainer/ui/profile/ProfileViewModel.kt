@@ -15,7 +15,7 @@ import javax.inject.Inject
 @HiltViewModel
 class ProfileViewModel @Inject constructor(
     private val usersDao: UsersDao,
-    private val session: UserSession,
+    private val session: UserSession
 ) : ViewModel() {
     companion object {
         const val TAG = "ProfileViewModel"
@@ -38,19 +38,18 @@ class ProfileViewModel @Inject constructor(
     init {
         viewModelScope.launch {
             val username = session.getAuthUser()
-            Log.d(TAG, "AuthUser: $username")
             if (username == null) {
                 showMessage("Пользователь не авторизован")
                 signalUserNotAuth()
                 return@launch
             }
-            // Отримання всіх користувачів для діагностики
+
+            // Перевірка існуючих користувачів у базі даних
             val allUsers = usersDao.getAllUsers()
             Log.d(TAG, "All users: $allUsers")
 
             // Отримання інформації про користувача
             val user = usersDao.fetchUser(username)
-            Log.d(TAG, "Fetched user: $user")
             if (user == null) {
                 showMessage("Пользователь не зарегистрирован")
                 signalUserNotAuth()
@@ -58,13 +57,8 @@ class ProfileViewModel @Inject constructor(
             }
 
             _stateFlow.update {
-                it.copy(
-                    username = user.username,
-                    email = user.email,
-                    age = user.age,
-                    weight = user.weight,
-                    height = user.height
-                )
+                it.copy(username = user.username, email = user.email, age = user.age,
+                    weight = user.weight, height = user.height)
             }
         }
     }
@@ -74,7 +68,7 @@ class ProfileViewModel @Inject constructor(
         _stateFlow.update { it.copy(logoutDone = true) }
     }
 
-    // зкинути стан помилки
+    // Скинути стан повідомлення про помилку
     fun userMessageShown() {
         _stateFlow.update { it.copy(errorMessage = null) }
     }

@@ -3,7 +3,7 @@ package com.example.trainer.data
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Entity("users")
+@Entity(tableName = "users")
 data class User(
     @PrimaryKey
     val username: String,
