@@ -43,7 +43,4 @@
         android:text="@string/finishtrn"
         android:layout_gravity="end"/>
 
-
-
-
 </FrameLayout>

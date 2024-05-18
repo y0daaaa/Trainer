@@ -1,4 +1,3 @@
-
 package com.example.trainer.ui.profile
 
 import android.os.Bundle
@@ -39,6 +38,7 @@ class ProfileFragment : Fragment(R.layout.fragment_profile) {
         viewLifecycleOwner.lifecycleScope.launch {
             viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
                 viewModel.stateFlow.collect { state ->
+                    Log.d("ProfileFragment", "State: $state")
                     // показати помилку
                     state.errorMessage?.let {
                         showMessage(it)

@@ -7,7 +7,7 @@ import androidx.room.RoomDatabase
 import androidx.room.migration.Migration
 import androidx.sqlite.db.SupportSQLiteDatabase
 
-@Database(entities = [User::class], version = 1, exportSchema = false)
+@Database(entities = [User::class, TrainingSession::class], version = 1, exportSchema = false)
 abstract class AppDatabase : RoomDatabase() {
 
     abstract fun getUsersDao(): UsersDao
@@ -44,7 +44,7 @@ abstract class AppDatabase : RoomDatabase() {
                             "weight TEXT)"
                 )
 
-               db.execSQL("INSERT INTO User_New (id, email, login, password) SELECT id, email, login, password FROM User")
+                db.execSQL("INSERT INTO User_New (id, email, login, password) SELECT id, email, login, password FROM User")
 
                 db.execSQL("DROP TABLE IF EXISTS User")
 

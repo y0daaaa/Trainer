@@ -25,4 +25,3 @@ class UserSessionImpl @Inject constructor(@ApplicationContext context: Context) 
         preferences.edit().remove(USERNAME).apply()
     }
 }
-

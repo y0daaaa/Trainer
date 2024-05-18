@@ -4,6 +4,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.trainer.data.UserSession
 import com.example.trainer.data.UsersDao
+import android.util.Log
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -37,21 +38,34 @@ class ProfileViewModel @Inject constructor(
     init {
         viewModelScope.launch {
             val username = session.getAuthUser()
+            Log.d(TAG, "AuthUser: $username")
             if (username == null) {
                 showMessage("Пользователь не авторизован")
                 signalUserNotAuth()
                 return@launch
             }
-            // отримуємо інформацію про користувача
+            // Отримання всіх користувачів для діагностики
+            val allUsers = usersDao.getAllUsers()
+            Log.d(TAG, "All users: $allUsers")
+
+            // Отримання інформації про користувача
             val user = usersDao.fetchUser(username)
+            Log.d(TAG, "Fetched user: $user")
             if (user == null) {
                 showMessage("Пользователь не зарегистрирован")
                 signalUserNotAuth()
                 return@launch
             }
 
-            _stateFlow.update { it.copy(username = user.username, email = user.email, age = user.age,
-                weight = user.weight, height = user.height) }
+            _stateFlow.update {
+                it.copy(
+                    username = user.username,
+                    email = user.email,
+                    age = user.age,
+                    weight = user.weight,
+                    height = user.height
+                )
+            }
         }
     }
 
@@ -59,7 +73,6 @@ class ProfileViewModel @Inject constructor(
         session.logout()
         _stateFlow.update { it.copy(logoutDone = true) }
     }
-
 
     // зкинути стан помилки
     fun userMessageShown() {
