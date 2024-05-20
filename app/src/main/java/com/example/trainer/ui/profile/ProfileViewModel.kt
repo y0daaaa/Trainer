@@ -38,14 +38,14 @@ class ProfileViewModel @Inject constructor(
         viewModelScope.launch {
             val username = session.getAuthUser()
             if (username == null) {
-                showMessage("Пользователь не авторизован")
+                showMessage("Користувач не авторизований")
                 signalUserNotAuth()
                 return@launch
             }
             // отримуємо інформацію про користувача
             val user = usersDao.fetchUser(username)
             if (user == null) {
-                showMessage("Пользователь не зарегистрирован")
+                showMessage("Користувач не зареєстрований")
                 signalUserNotAuth()
                 return@launch
             }
@@ -59,7 +59,6 @@ class ProfileViewModel @Inject constructor(
         session.logout()
         _stateFlow.update { it.copy(logoutDone = true) }
     }
-
 
     // зкинути стан помилки
     fun userMessageShown() {

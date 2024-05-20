@@ -1,6 +1,7 @@
 package com.example.trainer.di
 
 import android.content.Context
+import android.content.SharedPreferences
 import com.example.trainer.data.AppDatabase
 import com.example.trainer.data.UsersDao
 import com.example.trainer.data.WorkoutDao
@@ -29,5 +30,11 @@ object DatabaseModule {
     @Provides
     fun provideWorkoutDao(database: AppDatabase): WorkoutDao {
         return database.workoutDao()
+    }
+
+    @Provides
+    @Singleton
+    fun provideSharedPreferences(@ApplicationContext context: Context): SharedPreferences {
+        return context.getSharedPreferences("trainer_prefs", Context.MODE_PRIVATE)
     }
 }

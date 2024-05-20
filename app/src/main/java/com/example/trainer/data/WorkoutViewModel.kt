@@ -10,7 +10,8 @@ import javax.inject.Inject
 
 @HiltViewModel
 class WorkoutViewModel @Inject constructor(
-    private val workoutDao: WorkoutDao
+    private val workoutDao: WorkoutDao,
+    private val userSession: UserSession
 ) : ViewModel() {
 
     private val _someLiveData = MutableLiveData<String>()
@@ -18,19 +19,21 @@ class WorkoutViewModel @Inject constructor(
 
     fun addCalories(date: String, calories: Int) {
         viewModelScope.launch {
-            val workout = workoutDao.getWorkoutByDate(date)
+            val username = userSession.getAuthUser() ?: return@launch
+            val workout = workoutDao.getWorkoutByDateAndUser(date, username)
             if (workout != null) {
-                workoutDao.updateCalories(date, workout.calories + calories)
+                workoutDao.updateCalories(date, username, workout.calories + calories)
             } else {
-                workoutDao.insertWorkout(WorkoutEntity(date, calories))
+                workoutDao.insertWorkout(WorkoutEntity(date = date, calories = calories, username = username))
             }
-            updateLiveData() // Оновлення даних після додавання калорій
+            updateLiveData() // Оновити дані після додавання калорій
         }
     }
 
     fun updateLiveData() {
         viewModelScope.launch {
-            val data = workoutDao.getAllWorkouts().toString()
+            val username = userSession.getAuthUser() ?: return@launch
+            val data = workoutDao.getAllWorkoutsForUser(username).toString()
             _someLiveData.postValue(data)
         }
     }

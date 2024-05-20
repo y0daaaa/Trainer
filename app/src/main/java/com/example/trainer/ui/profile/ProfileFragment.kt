@@ -1,8 +1,6 @@
-
 package com.example.trainer.ui.profile
 
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import androidx.activity.addCallback
 import androidx.fragment.app.Fragment
@@ -12,6 +10,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.fragment.findNavController
 import com.example.trainer.R
+import com.example.trainer.data.WorkoutViewModel
 import com.example.trainer.databinding.FragmentProfileBinding
 import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
@@ -23,6 +22,7 @@ class ProfileFragment : Fragment(R.layout.fragment_profile) {
     private lateinit var binding: FragmentProfileBinding
 
     private val viewModel by viewModels<ProfileViewModel>()
+    private val workoutViewModel: WorkoutViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

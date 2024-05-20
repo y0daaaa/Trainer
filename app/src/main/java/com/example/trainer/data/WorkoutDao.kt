@@ -7,15 +7,16 @@ import androidx.room.Query
 
 @Dao
 interface WorkoutDao {
+
+    @Query("SELECT * FROM workoutentity WHERE date = :date AND username = :username")
+    suspend fun getWorkoutByDateAndUser(date: String, username: String): WorkoutEntity?
+
+    @Query("UPDATE workoutentity SET calories = :calories WHERE date = :date AND username = :username")
+    suspend fun updateCalories(date: String, username: String, calories: Int)
+
+    @Query("SELECT * FROM workoutentity WHERE username = :username")
+    suspend fun getAllWorkoutsForUser(username: String): List<WorkoutEntity>
+
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insertWorkout(workout: WorkoutEntity)
-
-    @Query("SELECT * FROM workout_table WHERE date = :date")
-    suspend fun getWorkoutByDate(date: String): WorkoutEntity?
-
-    @Query("UPDATE workout_table SET calories = :calories WHERE date = :date")
-    suspend fun updateCalories(date: String, calories: Int)
-
-    @Query("SELECT * FROM workout_table")
-    suspend fun getAllWorkouts(): List<WorkoutEntity>
+    suspend fun insertWorkout(workoutEntity: WorkoutEntity)
 }

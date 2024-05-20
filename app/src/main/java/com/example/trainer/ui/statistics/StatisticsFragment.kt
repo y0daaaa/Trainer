@@ -6,12 +6,14 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import com.example.trainer.databinding.FragmentStatisticsBinding
+import androidx.lifecycle.Observer
+import com.example.trainer.R
 import com.example.trainer.data.WorkoutViewModel
+import com.example.trainer.databinding.FragmentStatisticsBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class StatisticsFragment : Fragment() {
+class StatisticsFragment : Fragment(R.layout.fragment_statistics) {
 
     private var _binding: FragmentStatisticsBinding? = null
     private val binding get() = _binding!!
@@ -27,12 +29,10 @@ class StatisticsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        workoutViewModel.someLiveData.observe(viewLifecycleOwner) { data ->
-            binding.statisticsContent.text = data // Оновлення тексту статистики
-        }
-
-        workoutViewModel.updateLiveData() // Виклик для оновлення даних
+        workoutViewModel.someLiveData.observe(viewLifecycleOwner, Observer { data ->
+            binding.statisticsTitle.text = data
+        })
+        workoutViewModel.updateLiveData() // Оновлення даних при створенні фрагменту
     }
 
     override fun onDestroyView() {
