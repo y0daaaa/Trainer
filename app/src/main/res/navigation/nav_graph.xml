@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/sign_up_screen"
+        android:name="com.example.trainer.ui.signup.SingUpFragment"
+        android:label="fragment_sing_up"
+        tools:layout="@layout/fragment_sing_up"/>
+
+    <fragment
+        android:id="@+id/feedback_screen"
+        android:name="com.example.trainer.ui.feedback.FeedbackFragment"
+        android:label="fragment_feedback"
+        tools:layout="@layout/fragment_feedback"/>
+
+    <fragment
+        android:id="@+id/profile_nav"
+        android:name="com.example.trainer.ui.profile.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/sign_in_screen"
+        android:name="com.example.trainer.ui.signin.SignInFragment"
+        android:label="fragment_sign_in"
+        tools:layout="@layout/fragment_sign_in" />
+
+    <action
+        android:id="@+id/action_global_profile_nav"
+        app:destination="@id/profile_nav" />
+    <action
+        android:id="@+id/action_global_sign_in_screen"
+        app:destination="@id/sign_in_screen" />
+    <action
+        android:id="@+id/action_global_sign_up_screen"
+        app:destination="@id/sign_up_screen" />
+    <action
+        android:id="@+id/action_global_feedback_screen"
+        app:destination="@id/feedback_screen" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.trainer.ui.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/light1Fragment"
+        android:name="com.example.trainer.ui.light.Light1Fragment"
+        android:label="fragment_light1"
+        tools:layout="@layout/fragment_light1" />
+    <fragment
+        android:id="@+id/light2Fragment"
+        android:name="com.example.trainer.ui.light.Light2Fragment"
+        android:label="fragment_light2"
+        tools:layout="@layout/fragment_light2" />
+    <action
+        android:id="@+id/action_global_light2Fragment"
+        app:destination="@id/light2Fragment" />
+    <fragment
+        android:id="@+id/lightFragment"
+        android:name="com.example.trainer.ui.light.LightFragment"
+        android:label="fragment_light"
+        tools:layout="@layout/fragment_light" />
+    <action
+        android:id="@+id/action_global_lightFragment"
+        app:destination="@id/lightFragment" />
+    <action
+        android:id="@+id/action_global_light1Fragment"
+        app:destination="@id/light1Fragment" />
+    <fragment
+        android:id="@+id/mediumFirstFragment"
+        android:name="com.example.trainer.ui.medium.MediumFirstFragment"
+        android:label="fragment_medium_first"
+        tools:layout="@layout/fragment_medium_first" />
+    <fragment
+        android:id="@+id/mediumSecondFragment"
+        android:name="com.example.trainer.ui.medium.MediumSecondFragment"
+        android:label="fragment_medium_second"
+        tools:layout="@layout/fragment_medium_second" />
+    <fragment
+        android:id="@+id/mediumThirdFragment"
+        android:name="com.example.trainer.ui.medium.MediumThirdFragment"
+        android:label="fragment_medium_third"
+        tools:layout="@layout/fragment_medium_third" />
+    <action
+        android:id="@+id/action_global_mediumFirstFragment"
+        app:destination="@id/mediumFirstFragment" />
+    <action
+        android:id="@+id/action_global_mediumSecondFragment"
+        app:destination="@id/mediumSecondFragment" />
+    <action
+        android:id="@+id/action_global_mediumThirdFragment"
+        app:destination="@id/mediumThirdFragment" />
+    <fragment
+        android:id="@+id/hardFirstFragment"
+        android:name="com.example.trainer.ui.hard.HardFirstFragment"
+        android:label="fragment_hard_first"
+        tools:layout="@layout/fragment_hard_first" />
+    <fragment
+        android:id="@+id/hardSecondFragment"
+        android:name="com.example.trainer.ui.hard.HardSecondFragment"
+        android:label="fragment_hard_second"
+        tools:layout="@layout/fragment_hard_second" />
+    <fragment
+        android:id="@+id/hardThirdFragment"
+        android:name="com.example.trainer.ui.hard.HardThirdFragment"
+        android:label="fragment_hard_third"
+        tools:layout="@layout/fragment_hard_third" />
+    <action
+        android:id="@+id/action_global_hardFirstFragment"
+        app:destination="@id/hardFirstFragment" />
+    <action
+        android:id="@+id/action_global_hardSecondFragment"
+        app:destination="@id/hardSecondFragment" />
+    <action
+        android:id="@+id/action_global_hardThirdFragment"
+        app:destination="@id/hardThirdFragment" />
+    <fragment
+        android:id="@+id/hardFourthFragment"
+        android:name="com.example.trainer.ui.hard.HardFourthFragment"
+        android:label="fragment_hard_fourth"
+        tools:layout="@layout/fragment_hard_fourth" />
+    <fragment
+        android:id="@+id/hardFifthFragment"
+        android:name="com.example.trainer.ui.hard.HardFifthFragment"
+        android:label="fragment_hard_fifth"
+        tools:layout="@layout/fragment_hard_fifth" />
+    <action
+        android:id="@+id/action_global_hardFourthFragment"
+        app:destination="@id/hardFourthFragment" />
+    <action
+        android:id="@+id/action_global_hardFifthFragment"
+        app:destination="@id/hardFifthFragment" />
+    <fragment
+        android:id="@+id/statisticsFragment"
+        android:name="com.example.trainer.ui.statistics.StatisticsFragment"
+        android:label="fragment_statistics"
+        tools:layout="@layout/fragment_statistics" />
+    <action
+        android:id="@+id/action_global_statisticsFragment"
+        app:destination="@id/statisticsFragment" />
+    <action
+        android:id="@+id/action_global_homeFragment"
+        app:destination="@id/homeFragment" />
+    <action
+        android:id="@+id/action_profile_to_home"
+        app:destination="@id/homeFragment" />
+    <action
+        android:id="@+id/action_statistics_to_home"
+        app:destination="@id/homeFragment" />
+    <action
+        android:id="@+id/action_profile_to_statistics"
+        app:destination="@id/statisticsFragment" />
+    <action
+        android:id="@+id/action_home_to_statistics"
+        app:destination="@id/statisticsFragment" />
+
+</navigation>

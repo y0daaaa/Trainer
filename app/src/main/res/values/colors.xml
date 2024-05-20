@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="gunmetal">#193E7D</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="silver">#BFC0C0</color>
+    <color name="coral">#75A0E0</color>
+    <color name="bluegray">#3F4464</color>
+    <color name="dark_coral">#4771AF</color>
+</resources>
