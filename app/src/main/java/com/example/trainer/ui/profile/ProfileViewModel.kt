@@ -42,7 +42,6 @@ class ProfileViewModel @Inject constructor(
                 signalUserNotAuth()
                 return@launch
             }
-            // отримуємо інформацію про користувача
             val user = usersDao.fetchUser(username)
             if (user == null) {
                 showMessage("Користувач не зареєстрований")
@@ -60,7 +59,6 @@ class ProfileViewModel @Inject constructor(
         _stateFlow.update { it.copy(logoutDone = true) }
     }
 
-    // зкинути стан помилки
     fun userMessageShown() {
         _stateFlow.update { it.copy(errorMessage = null) }
     }

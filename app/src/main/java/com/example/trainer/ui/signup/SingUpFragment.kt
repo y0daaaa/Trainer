@@ -27,13 +27,11 @@ class SingUpFragment : Fragment(R.layout.fragment_sing_up) {
         lifecycleScope.launch(Dispatchers.Main) {
             repeatOnLifecycle(Lifecycle.State.STARTED) {
                 viewModel.stateFlow.collect { state ->
-                    // якщо помилка то показати а після скинути
                     state.errorMessage?.let {
                         showMessage(message = it)
 
                     }
                     if (state.signUpDone) {
-                        // регістрація пройдена, перехід до профілю
                         findNavController().navigate(R.id.action_global_profile_nav)
                     }
                 }

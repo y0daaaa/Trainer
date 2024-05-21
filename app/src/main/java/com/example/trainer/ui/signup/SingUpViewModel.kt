@@ -31,31 +31,23 @@ class SingUpViewModel @Inject constructor(
 
     fun signUp(username: String, email: String, password: String, age: String, height: String, weight: String) {
         viewModelScope.launch {
-            // перевірка чи є користувач
             val user = userDao.fetchUser(username)
             if (user != null) {
-                showMessage("Пользователь существует")
+                showMessage("Користувач з таким іменем уже інсує")
                 return@launch
             }
 
-            // регистрація нового користувача
             val newUser = User(username, email, password, age, height, weight)
             userDao.insert(newUser)
-
-            // авторізація нового користувача
             session.saveAuthUser(newUser.username)
-
-            // силка на підара
             _stateFlow.update { it.copy(signUpDone = true) }
         }
     }
 
-    // скинути хуйню
     fun userMessageShown() {
         _stateFlow.update { it.copy(errorMessage = null) }
     }
 
-    // показати хуйню
     fun showMessage(message: String) {
         _stateFlow.update { it.copy(errorMessage = message) }
     }
