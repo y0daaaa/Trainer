@@ -35,6 +35,12 @@
     <string name="finishtrn">Закінчити тренування</string>
     <string name="medium">Тренування середньої важкості</string>
     <string name="hard">Тяжке тренування</string>
+    <string-array name="time_period_array">
+        <item>Last 7 days</item>
+        <item>Last 30 days</item>
+        <item>Last 6 months</item>
+        <item>Last year</item>
+    </string-array>
     <string name="choose_training">Як ви сьогодні почуваєтесь? Виберіть тренування </string>
     <string name="warning">Важливо! Не зважаючи на вибрану інтенсивність тренування, потрібно обовʼязково зробити розминку перед ним для запобігання шкоди вашому організму!</string>
     <!-- TODO: Remove or change this placeholder text -->

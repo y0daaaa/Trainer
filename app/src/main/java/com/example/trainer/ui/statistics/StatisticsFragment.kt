@@ -6,18 +6,18 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.Observer
-import com.example.trainer.R
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.trainer.data.WorkoutViewModel
 import com.example.trainer.databinding.FragmentStatisticsBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class StatisticsFragment : Fragment(R.layout.fragment_statistics) {
+class StatisticsFragment : Fragment() {
 
     private var _binding: FragmentStatisticsBinding? = null
     private val binding get() = _binding!!
     private val workoutViewModel: WorkoutViewModel by viewModels()
+    private lateinit var adapter: StatisticsAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -29,10 +29,16 @@ class StatisticsFragment : Fragment(R.layout.fragment_statistics) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        workoutViewModel.someLiveData.observe(viewLifecycleOwner, Observer { data ->
-            binding.statisticsTitle.text = data
-        })
-        workoutViewModel.updateLiveData() // Оновлення даних при створенні фрагменту
+
+        adapter = StatisticsAdapter()
+        binding.recyclerView.layoutManager = LinearLayoutManager(requireContext())
+        binding.recyclerView.adapter = adapter
+
+        workoutViewModel.someLiveData.observe(viewLifecycleOwner) { data ->
+            adapter.submitList(data)
+        }
+
+        workoutViewModel.updateLiveData()
     }
 
     override fun onDestroyView() {

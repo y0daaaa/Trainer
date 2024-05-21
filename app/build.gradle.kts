@@ -40,10 +40,16 @@ android {
     viewBinding {
         enable = true
     }
+
+    dataBinding {
+        enable = true
+    }
 }
 
 dependencies {
     implementation("androidx.core:core-ktx:1.12.0")
+    implementation("androidx.databinding:databinding-runtime:4.2.2")
+    implementation("androidx.recyclerview:recyclerview:1.2.1")
     implementation("pl.droidsonroids.gif:android-gif-drawable:1.2.25")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.11.0")

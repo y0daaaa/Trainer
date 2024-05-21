@@ -19,4 +19,8 @@ interface WorkoutDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertWorkout(workoutEntity: WorkoutEntity)
+
+    @Query("SELECT * FROM workoutentity WHERE date BETWEEN :startDate AND :endDate AND username = :username")
+    suspend fun getWorkoutsByPeriod(startDate: String, endDate: String, username: String): List<WorkoutEntity>
+
 }

@@ -14,8 +14,8 @@ class WorkoutViewModel @Inject constructor(
     private val userSession: UserSession
 ) : ViewModel() {
 
-    private val _someLiveData = MutableLiveData<String>()
-    val someLiveData: LiveData<String> get() = _someLiveData
+    private val _someLiveData = MutableLiveData<List<WorkoutEntity>>()
+    val someLiveData: LiveData<List<WorkoutEntity>> get() = _someLiveData
 
     fun addCalories(date: String, calories: Int) {
         viewModelScope.launch {
@@ -26,15 +26,16 @@ class WorkoutViewModel @Inject constructor(
             } else {
                 workoutDao.insertWorkout(WorkoutEntity(date = date, calories = calories, username = username))
             }
-            updateLiveData() // Оновити дані після додавання калорій
+            updateLiveData()
         }
     }
 
     fun updateLiveData() {
         viewModelScope.launch {
             val username = userSession.getAuthUser() ?: return@launch
-            val data = workoutDao.getAllWorkoutsForUser(username).toString()
+            val data = workoutDao.getAllWorkoutsForUser(username)
             _someLiveData.postValue(data)
         }
     }
 }
+
