@@ -56,10 +56,7 @@ class SignInFragment : Fragment(R.layout.fragment_sign_in) {
                 findNavController().navigate(R.id.action_global_feedback_screen)
             }
         }
-
     }
-
-
 
     private fun checkFilledFields(): Boolean {
         val usernameFilled = binding.etUsername.text.isNotBlank()

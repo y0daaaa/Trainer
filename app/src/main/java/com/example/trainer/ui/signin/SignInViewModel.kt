@@ -14,7 +14,7 @@ import javax.inject.Inject
 @HiltViewModel
 class SignInViewModel @Inject constructor(
     private val usersDao: UsersDao,
-    private val session: UserSession,
+    private val session: UserSession
 ) : ViewModel() {
     companion object {
         const val TAG = "SignInViewModel"
