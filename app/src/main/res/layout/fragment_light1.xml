@@ -17,7 +17,7 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="470dp"
         android:fontFamily="@font/fixel_text"
-        android:text="Випади"
+        android:text="@string/light1"
         android:textColor="@color/white"
         android:textSize="34sp" />
 
@@ -29,18 +29,18 @@
         android:textColor="@color/silver"
         android:textSize="28sp"
         android:fontFamily="@font/fixel_text"
-        android:text="Виконайте по 15 повторень та перейдіть до наступного за допомогою кнопки нижче"/>
+        android:text="@string/light1des"/>
 
     <Button
         android:id="@+id/light_next_2"
         android:layout_width="230dp"
         android:layout_height="55dp"
-        android:layout_marginTop="650dp"
+        android:layout_marginTop="670dp"
         android:backgroundTint="@color/dark_coral"
         android:layout_marginEnd="20dp"
         android:fontFamily="@font/fixel_text"
         android:textSize="18sp"
-        android:text="Наступна впрaва"
+        android:text="@string/nextex"
         android:layout_gravity="end"/>
 
 

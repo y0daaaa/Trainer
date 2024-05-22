@@ -31,7 +31,7 @@ class SignInViewModel @Inject constructor(
 
     init {
         viewModelScope.launch {
-            // проверка авторизации
+
             val isAuth = session.getAuthUser() != null
             _stateFlow.update { it.copy(isAuth = isAuth) }
         }
@@ -39,20 +39,18 @@ class SignInViewModel @Inject constructor(
 
     fun signIn(username: String, password: String) {
         viewModelScope.launch {
-            // отримуємо користувача і порівняння паролів
             val user = usersDao.fetchUser(username)
+
             if (username == user?.username && password == user.password) {
-                // авторизація успішна >> збереження сесії
                 session.saveAuthUser(username)
-                // повідомлення про успішну авторизацію
+
                 signalAuthDone()
                 return@launch
             }
-            showMessage("We don`t have your account in base")
+            showMessage("У нашій базі нема такого користувача")
         }
     }
 
-    // !помилку
     fun userMessageShown() {
         _stateFlow.update { it.copy(errorMessage = null) }
     }
