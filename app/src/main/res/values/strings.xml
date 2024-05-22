@@ -9,8 +9,8 @@
     <string name="brnclr">Статистика втрачених калорій</string>
     <string name="date">Дата</string>
     <string name="clrs">Калорії</string>
-    <string name="usr">Імʼя</string>
-    <string name="light2des">Виконуйте не поспішаючи 2 хвилини як зображено на відео та натисніть кнопку нижче</string>
+    <string name="usr">Ім'я</string>
+    <string name="light2des">Виконуйте не поспішаючи 2 хвилини, як зображено на відео, та натисніть кнопку нижче</string>
     <string name="phonenmb">+380 73 194 64 09</string>
     <string name="password">Пароль</string>
     <string name="sign_up">Зареєструвати аккаунт</string>
@@ -23,37 +23,35 @@
     <string name="help">Допомога</string>
     <string name="nextex">Наступна вправа</string>
     <string name="squats">Присідання</string>
-    <string name="hard1">Вправа на поясницю</string>
-    <string name="hard1des">Зафіксуйте положення тіла як на відео, виконайте 3 підходи по 12 повторів, коли відчуваєте занадто легко візьміть в руки блін від штанги</string>
+    <string name="hard1">Вправа на поперек</string>
+    <string name="hard1des">Зафіксуйте положення тіла як на відео, виконайте 3 підходи по 12 повторів. Коли відчуваєте, що занадто легко, візьміть в руки диск від штанги</string>
     <string name="hard2">Тяга гантелі на спину</string>
-    <string name="hard2des">Візьміть підходящі гантелі, тримайте спину рівно, 4 підходи з зростаючою вагою на 12 повторів</string>
+    <string name="hard2des">Візьміть підходящі гантелі, тримайте спину рівно. 4 підходи зі зростаючою вагою на 12 повторів</string>
     <string name="hard3">Вертикальний блок</string>
-    <string name="hard3des">В показаній вище вправі, головне зробити правильний хват та тримати спину рівно, 4 підходи 12 повторів, правильно вибирайте вагу</string>
+    <string name="hard3des">В показаній вище вправі головне зробити правильний хват та тримати спину рівно. 4 підходи по 12 повторів, правильно вибирайте вагу</string>
     <string name="hard4">Французький жим</string>
-    <string name="hard4des">Гантелі повільно опускайте до голови, лікті потрібно тримати з углом всередину і зафіксувати в одному місті, 3 підходи 8 повторів</string>
+    <string name="hard4des">Гантелі повільно опускайте до голови, лікті потрібно тримати під кутом всередину і зафіксувати в одному місці. 3 підходи по 8 повторів</string>
     <string name="hard5">Відтискання на брусах</string>
-    <string name="hard5des">Останню вправу за технікою уазаною вище, до відказу, якщо занадто легко повісити бліни на спеціальний пояс</string>
+    <string name="hard5des">Останню вправу виконуйте за технікою, вказаною вище, до відмови. Якщо занадто легко, повісьте диски на спеціальний пояс</string>
     <string name="mediumfirst">Молотки</string>
-    <string name="mediumthird">Махи гантелями сидя</string>
-    <string name="mediumthirddes">Угол лавки повинен бути 80° не нахиляйте руки занадто низько, виконати 3 підходи по 12 повторів</string>
+    <string name="mediumthird">Махи гантелями сидячи</string>
+    <string name="mediumthirddes">Кут лавки повинен бути 80°. Не опускайте руки занадто низько, виконайте 3 підходи по 12 повторів</string>
     <string name="mediumsecond">Махи гантелями</string>
     <string name="mediumseconddes">Розмістіть лавку горизонтально та виконайте 3 підходи по 12 повторень з підходящими вагами</string>
-    <string name="mediumfirstdes">Виберіть гантелі з зручною вагою для того аби зробити 3 підходи по 12 повторень, локті повинні залишатися на місці</string>
-    <string name="squatsdes">Виконайте 15 повторень, правильно контролюючи дихання та натисніть кнопку нижче</string>
-    <string name="help2">Для звʼязку з нами використовуйте посилання нижче</string>
+    <string name="mediumfirstdes">Виберіть гантелі з зручною вагою для того, щоб зробити 3 підходи по 12 повторень. Лікті повинні залишатися на місці</string>
+    <string name="squatsdes">Виконайте 15 повторень, правильно контролюючи дихання, та натисніть кнопку нижче</string>
+    <string name="help2">Для зв\'язку з нами використовуйте посилання нижче</string>
     <string name="light">Легке тренування</string>
     <string name="finishtrn">Закінчити тренування</string>
     <string name="medium">Тренування середньої важкості</string>
-    <string name="hard">Тяжке тренування</string>
+    <string name="hard">Важке тренування</string>
+    <string name="choose_training">Як ви сьогодні почуваєтесь? Виберіть тренування</string>
+    <string name="warning">Важливо! Незважаючи на вибрану інтенсивність тренування, потрібно обов\'язково зробити розминку перед ним для запобігання шкоди вашому організму!</string>
+    <string name="emailfb">kuzma.yurii@student.uzhnu.edu.ua</string>
     <string-array name="time_period_array">
         <item>Last 7 days</item>
         <item>Last 30 days</item>
         <item>Last 6 months</item>
         <item>Last year</item>
     </string-array>
-    <string name="choose_training">Як ви сьогодні почуваєтесь? Виберіть тренування </string>
-    <string name="warning">Важливо! Не зважаючи на вибрану інтенсивність тренування, потрібно обовʼязково зробити розминку перед ним для запобігання шкоди вашому організму!</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="emailfb">kuzma.yurii@student.uzhnu.edu.ua</string>
 </resources>
