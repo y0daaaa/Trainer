@@ -1,2 +1,2 @@
-# Trainer
+# MoveMate
 Coursework Uzhhorod National University
